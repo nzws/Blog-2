@@ -1,0 +1,563 @@
+:root {
+    --black1: #0f0f0f;
+    --black2: #1f1f1f;
+    --black3: #2f2f2f;
+    --black4: #3f3f3f;
+    --gray: #7f7f7f;
+    --white4: #bfbfbf;
+    --white3: #cfcfcf;
+    --white2: #dfdfdf;
+    --white1: #efefef;
+
+    --accent: #ff3f3f;
+
+    --redA: #ff7f7f;
+    --redB: #ffdfdf;
+    --blueA: #7f7fff;
+    --blueB: #dfdfff;
+    --greenA: #7fff7f;
+    --greenB: #dfffdf;
+    --yellowA: #ffff7f;
+    --yellowB: #ffffdf;
+}
+
+html,
+body {
+    width: calc(100vw - 18px);
+    height: calc(100vh - 122px);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white1);
+}
+html {
+    text-align: left;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--black1);
+}
+a {
+    color: var(--black1);
+    text-decoration: none;
+}
+img {
+    vertical-align: top;
+}
+main {
+    margin: 32px 15%;
+}
+
+#header {
+    /* z-index: 3;
+    position: fixed;
+    width: calc(75vw - 32px); */
+    top: 0;
+    margin: 8px;
+    margin-top: 0;
+    padding: 8px;
+    border-bottom: solid 2px var(--white2);
+    background-color: var(--white1);
+}
+#header > .title {
+    display: block;
+    font-size: 48px;
+    border-bottom: dotted 2px var(--black1);
+}
+#header > .sub-title {
+    margin: 4px;
+}
+
+#main {
+    display: flex;
+    margin: 8px;
+    /* margin-top: 122px;
+    margin-bottom: 76px; */
+    background-color: var(--white1);
+}
+#main > .content {
+    width: 100%;
+}
+#main > .content > .message {
+    text-align: center;
+    margin: 8px;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--gray);
+}
+#main > .content > .page {
+    margin: 8px;
+    padding: 8px;
+    background-color: var(--white2);
+}
+#main > .content > .button:hover {
+    background-color: var(--white3);
+}
+#main > .content > .page {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px 96px 8px 80px;
+}
+#main > .content > .page > .ribbon {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 16px;
+    width: 48px;
+    margin: 0;
+    padding: 8px 0;
+    z-index: 2;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white1);
+    background: var(--black2);
+}
+#main > .content > .button:hover > .ribbon {
+    padding: 12px 0 8px 0;
+}
+#main > .content > .page > .ribbon:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: solid 24px var(--black2);
+    border-right: solid 24px var(--black2);
+    border-bottom: solid 12px transparent;
+}
+#main > .content > .page > .title {
+    font-weight: 500;
+    font-size: 20px;
+}
+#main > .content > .page > .description {
+    margin-left: 2px;
+    font-size: 14px;
+    color: var(--black4);
+}
+#main > .content > .page > .date {
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 4px;
+    padding-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    color: var(--white2);
+    background-color: var(--black2);
+}
+#main > .content > .page > .date:before {
+    content: "";
+    position: absolute;
+    bottom: 14px;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black2);
+}
+#main > .content > .text {
+    margin: 8px;
+    padding: 36px 24px;
+    background-color: var(--white2);
+}
+#main > .content > .menu {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+}
+#main > .content > .menu > .button {
+    text-align: center;
+    flex-grow: 2;
+    margin: 0 4px;
+    padding: 8px;
+    background-color: var(--white2);
+}
+#main > .content > .menu > .button:hover {
+    background-color: var(--white3);
+}
+#main > .content > .menu > .dont {
+    color: var(--gray);
+    background-color: var(--white2);
+    background-image: repeating-linear-gradient(-45deg, var(--white1), var(--white1) 6px, transparent 0, transparent 12px);
+}
+#main > #sidebar {
+    width: 320px;
+    margin-left: 8px;
+}
+#main > #sidebar > .profile {
+    margin: 8px;
+    padding: 8px;
+    color: var(--white1);
+    background-color: var(--black2);
+}
+#main > #sidebar > .profile > .profile-1 {
+    display: flex;
+}
+#main > #sidebar > .profile > .profile-1 > div > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+#main > #sidebar > .profile > .profile-1 > .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+    font-size: 18px;
+}
+#main > #sidebar > .profile > .profile-2 {
+    margin-top: 8px;
+    padding-top: 8px;
+    font-size: 12px;
+    border-top: solid 1px var(--white1);
+}
+#main > #sidebar > .tip {
+    margin: 8px;
+    padding: 8px;
+    font-size: 14px;
+    border: solid 1px var(--white3);
+    background-color: var(--white1);
+}
+#main > #sidebar > .tip > .category {
+    margin: 4px 0;
+    font-size: 12px;
+    border-bottom: solid 1px var(--black1);
+}
+#main > #sidebar > .tip > a {
+    font-weight: 500;
+    color: var(--accent);
+}
+
+#footer {
+    /* z-index: 3;
+    position: fixed;
+    width: calc(75vw - 32px); */
+    bottom: 0;
+    margin: 8px;
+    margin-bottom: 0;
+    padding: 8px;
+    border-top: solid 2px var(--white2);
+    background-color: var(--white1);
+}
+#footer > .precautions {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 720px) {
+    #header > .title {
+        font-size: 24px;
+    }
+    #header > .sub-title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #main {
+        display: block;
+    }
+    #main > #sidebar {
+        width: 100%;
+        margin: 0;
+    }
+    #main > #sidebar > .profile > .profile-1 {
+        display: block;
+    }
+    #main > #sidebar > .profile > .profile-1 > div > img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4px;
+        width: 50%;
+        height: 50%;
+    }
+    #main > #sidebar > .profile > .profile-2 {
+        font-size: 16px;
+    }
+    #main > #sidebar > .tip {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        margin: 32px 0%;
+    }
+    #main > .content > .page {
+        padding-right: 0;
+    }
+    #main > .content > .page > .title {
+        font-size: 16px;
+    }
+    #main > .content > .page > .description {
+        font-size: 12px;
+    }
+    #main > .content > .page > .date {
+        position: static;
+        margin-top: 8px;
+        font-size: 12px;
+    }
+    #main > .content > .page > .date:before {
+        display: none;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 960px) {
+    main {
+        margin: 32px 5%;
+    }
+    #main > .content > .page {
+        padding-right: 0;
+    }
+    #main > .content > .page > .title {
+        font-size: 16px;
+    }
+    #main > .content > .page > .description {
+        font-size: 12px;
+    }
+    #main > .content > .page > .date {
+        position: static;
+        margin-top: 8px;
+        font-size: 12px;
+    }
+    #main > .content > .page > .date:before {
+        display: none;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+    main {
+        margin: 32px 10%;
+    }
+    #main > .content > .page > .title {
+        font-size: 16px;
+    }
+    #main > .content > .page > .description {
+        font-size: 12px;
+    }
+    #main > .content > .page > .date {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+    #main > .content > .page > .date:before {
+        bottom: 12px;
+    }
+}
+
+.text > h2 {
+    margin: 64px 0 16px 0;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 24px;
+    border-left: solid 8px var(--black2);
+    background-color: var(--white3);
+}
+.text > h2:first-child {
+    margin: 0 0 16px 0;
+}
+.text > h3 {
+    display: block;
+    margin: 16px 0;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: dotted 2px var(--gray);
+    color: var(--black4);
+}
+.text > b {
+    font-weight: 500;
+}
+.text > i {
+    font-weight: 100;
+}
+.text .red {
+    color: red;
+}
+.text .orange {
+    color: orange;
+}
+.text .yellow {
+    color: yellow;
+}
+.text .lime {
+    color: lime;
+}
+.text .green {
+    color: green;
+}
+.text .aqua {
+    color: aqua;
+}
+.text .blue {
+    color: blue;
+}
+.text .purple {
+    color: purple;
+}
+.text q {
+    margin: 0 2px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: solid 1px var(--white4);
+    background-color: var(--white3);
+}
+.text > blockquote {
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 14px;
+    color: var(--gray);
+    background-color: var(--white3);
+}
+.text > .warning {
+    font-weight: 500;
+    border: solid 1px var(--redA);
+    color: var(--redA);
+    background-color: var(--redB);
+}
+.text > .point {
+    font-weight: 500;
+    border: solid 1px var(--blueA);
+    color: var(--blueA);
+    background-color: var(--blueB);
+}
+.text .c {
+    margin: 0 2px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: solid 1px var(--black4);
+    color: var(--white1);
+    background-color: var(--black2);
+}
+.text > .blockcode {
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 14px;
+    color: var(--white1);
+    background-color: var(--black2);
+}
+.text > .blockcode > pre {
+    margin: 0;
+    padding: 0;
+}
+.text > a {
+    font-weight: 500;
+    color: var(--accent);
+}
+.text > .hide {
+    color: transparent;
+}
+.text > table {
+    border-collapse: collapse;
+    margin: 8px 0;
+}
+.text > table tr:first-child {
+    border-bottom: double 3px var(--gray);
+}
+.text > table th {
+    text-align: left;
+    vertical-align: top;
+    margin: 0;
+    padding: 4px;
+    border: solid 1px var(--gray);
+    background-color: var(--white4);
+}
+.text > table td {
+    text-align: left;
+    vertical-align: top;
+    margin: 0;
+    padding: 4px;
+    border: solid 1px var(--gray);
+    background-color: var(--white3);
+}
+.text > table .nowarp {
+    white-space: nowrap;
+}
+.text > table .a-left {
+    text-align: left;
+}
+.text > table .a-center {
+    text-align: center;
+}
+.text > table .a-right {
+    text-align: center;
+}
+.text > table .v-top {
+    vertical-align: top;
+}
+.text > table .v-middle {
+    vertical-align: middle;
+}
+.text > table .v-bottom {
+    vertical-align: bottom;
+}
+.text > ul {
+    list-style-type: none !important;
+    margin: 0 0 0 12px;
+    padding: 0;
+}
+.text > ul li {
+    list-style-type: none !important;
+}
+.text > ul li:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: var(--black1);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.text > ol {
+    margin: 0 0 0 24px;
+    padding: 0;
+}
+.text > img {
+    display: block;
+    width: calc(100% - 4px);
+    height: auto;
+    margin: 12px 0;
+    object-fit: cover;
+}
+.text > .p50,
+.text > .p33,
+.text > .p25 {
+    display: flex;
+    margin: 8px -4px;
+}
+.text > .p50 img {
+    margin: 4px;
+    width: calc(50% - 8px);
+    object-fit: cover;
+}
+.text > .p33 img {
+    margin: 4px;
+    width: calc(33.33% - 8px);
+    object-fit: cover;
+}
+.text > .p25 img {
+    margin: 4px;
+    width: calc(25% - 8px);
+    object-fit: cover;
+}
+.text > .video {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+}
+.text > .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    .text > h2 {
+        font-size: 20px;
+    }
+}
