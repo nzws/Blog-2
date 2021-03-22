@@ -364,10 +364,10 @@ main {
     border-bottom: dotted 2px var(--gray);
     color: var(--black4);
 }
-.text > b {
+.text b {
     font-weight: 500;
 }
-.text > i {
+.text i {
     font-weight: 100;
 }
 .text .red {
@@ -393,6 +393,21 @@ main {
 }
 .text .purple {
     color: purple;
+}
+.text .s32 {
+    font-size: 32px;
+}
+.text .s24 {
+    font-size: 24px;
+}
+.text .s16 {
+    font-size: 16px;
+}
+.text .s12 {
+    font-size: 12px;
+}
+.text .s8 {
+    font-size: 8px;
 }
 .text q {
     margin: 0 2px;
@@ -441,7 +456,7 @@ main {
     margin: 0;
     padding: 0;
 }
-.text > a {
+.text a {
     font-weight: 500;
     color: var(--accent);
 }
