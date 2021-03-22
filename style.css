@@ -231,6 +231,27 @@ main {
     font-weight: 500;
     color: var(--accent);
 }
+#main > #sidebar > .gallery {
+    position: relative;
+    margin: 8px;
+}
+#main > #sidebar > .gallery > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#main > #sidebar > .gallery .comment {
+    display: inline-block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--white1);
+    text-shadow: 0 0 4px var(--black1);
+}
 
 #footer {
     /* z-index: 3;

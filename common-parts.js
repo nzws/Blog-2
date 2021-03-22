@@ -23,6 +23,10 @@ sidebar.insertAdjacentHTML(
             </div>
             <div class="profile-2">インターネットの端でひっそりと余暇を楽しむ学生。色々と活動を行う中、最近は小説の執筆やマイクラ鯖の開発協力、小規模なプロジェクトの制作、ＰＣゲームを趣味として時間を潰している。</div>
         </div>
+        <div class="gallery">
+            <div class="comment">My Cool Environment</div>
+            <img src="/assets/desktop.jpg" />
+        </div>
         <div class="tip">
             <div class="category">ソーシャルメディア</div>
             ・<a href="https://twitter.com/SomethingOnu" target="_blank" rel="noopener noreferrer">Twitter</a></br>
