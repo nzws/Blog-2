@@ -38,5 +38,24 @@ sidebar.insertAdjacentHTML(
             ・<a href="http://www.skaldworld.com/" target="_blank" rel="noopener noreferrer">Skald World</a></br>
             ・<a href="https://dotplants.net/" target="_blank" rel="noopener noreferrer">dotPlants</a>
         </div>
+        <div class="gallery">
+            <div id="youtube" class="video">
+                <iframe src="https://www.youtube.com/embed/FGbCSufgnsw?mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     `
 );
+
+const onResize = () => {
+    const video = document.getElementById("youtube");
+    if (!video) {
+        throw new Error("X(");
+    }
+
+    const width = video.clientWidth;
+    const height = (width / 16) * 9;
+    video.style.height = `${height}px`;
+}
+
+onResize();
+window.addEventListener('resize', onResize);

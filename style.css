@@ -241,6 +241,13 @@ main {
     height: auto;
     object-fit: cover;
 }
+#main > #sidebar > .gallery > .video iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
 #main > #sidebar > .gallery .comment {
     display: inline-block;
     position: absolute;
@@ -590,6 +597,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
+    vertical-align: top;
 }
 
 @media screen and (max-width: 720px) {
