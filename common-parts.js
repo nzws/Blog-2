@@ -27,6 +27,10 @@ sidebar.insertAdjacentHTML(
             <div class="comment">My Cool Environment</div>
             <img src="/assets/desktop.jpg" />
         </div>
+        <div class="gallery">
+            <div class="comment">My Cool Computers</div>
+            <img src="/assets/laptop.jpg" />
+        </div>
         <div class="tip">
             <div class="category">ソーシャルメディア</div>
             ・<a href="https://twitter.com/SomethingOnu" target="_blank" rel="noopener noreferrer">Twitter</a></br>
