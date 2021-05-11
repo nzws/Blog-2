@@ -18,6 +18,16 @@
 
         <link href="/style.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500&&display=swap" rel="stylesheet" />
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                }
+            });
+        </script>
     </head>
     <body>
         <main>
@@ -46,6 +56,12 @@
                             これは<span class="s16">16pxのテキスト</span>である。</br>
                             これは<span class="s12">12pxのテキスト</span>である。</br>
                             これは<span class="s8">8pxのテキスト</span>である。</br>
+                            </br>
+                            マンデルブロ集合の定義は
+                            \[\begin{cases}Z_{n+1}=z_{n}^{2}+c\\ Z_{n}=0\end{cases}\]
+                            である。</br>
+                            </br>
+                            黄金比は\(1:\dfrac{1+\sqrt{5}}{2}\)である。</br>
                             </br>
                             これは<q>引用したテキスト</q>である。
                             <blockquote>
