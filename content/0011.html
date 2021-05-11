@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="ja-jp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MathJaxを導入してみる - おぬ的な気まぐれブログ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link href="/assets/favicon.ico" rel="icon" />
+        <link href="/assets/apple-touch-icon.png" sizes="180x180" rel="apple-touch-icon" />
+
+        <meta property="og:url" content="http://blog.0nu.be/" />
+        <meta property="og:site_name" content="おぬ的な気まぐれブログ" />
+        <meta property="og:description" content="おぬ氏が日記や備忘録を纏めるだけのサイト" />
+        <meta property="og:type" content="blog" />
+        <meta property="og:image" content="/assets/thumbnail.png" />
+        <meta property="og:title" content="MathJaxを導入してみる - おぬ的な気まぐれブログ" />
+
+        <link href="/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500&&display=swap" rel="stylesheet" />
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <main>
+            <div id="header"></div>
+            <div id="main">
+                <div id="page" class="content">
+                    <div class="text">
+                        <!-- SoF -->
+                            <h2>実は自由性が高いサイト</h2>
+
+                                一応だが本ブログは廃止されたプロジェクトであるインターネット百科事典「Elexandria Library」をベースとして作ったため、記事サンプルを見れば分かるように無駄なレベルで文章が装飾できるように作られている。これから心機一転して真面目な記事を書くことはないと思うが、せっかくなので何となくMathJaxを導入することにした。あれ、これ導入する意味あるのか？
+
+                            <h2>MathJaxとは？</h2>
+
+                                MathJaxはウェブ上に数式を表示するオープンソースのシステム…云わばJavaScriptライブラリーである。サーバー側が用意していればクライアント側の事前設定・導入操作などの必要は皆無、ブラウザーの種類を問わずに高度な数式を見ることができるのだ。また画像を貼り付けるわけではないため、どれだけ拡大してもボヤボヤしたジャギーが出ることはない。ちなみにMarkdown形式の中でも(大抵は)使える。</br>
+                                </br>
+                                大学生になれば論文など何処かしらでこの書式を使うため、今のうちに慣れておいて損はない。
+
+                            <h2>導入手順</h2>
+
+                                うん、とりあえず<span class="c"><code>&lt;head&gt;</code></span>と<span class="c"><code>&lt;/head&gt;</code></span>の間に
+                                <div class="blockcode">
+<pre>
+&lt;script
+    type=&quot;text/javascript&quot;
+    src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML&quot;&gt;
+&lt;/script&gt;
+</pre>
+                                </div>
+                                と
+                                <div class="blockcode">
+<pre>
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ [&#x27;$&#x27;,&#x27;$&#x27;], [&quot;\\(&quot;,&quot;\\)&quot;] ],
+            displayMath: [ [&#x27;$$&#x27;,&#x27;$$&#x27;], [&quot;\\[&quot;,&quot;\\]&quot;] ]
+        }
+    });
+&lt;/script&gt;
+</pre>
+                                </div>
+                                をぶち込めば使えるようになる。簡単に説明すれば1番目のコードでMathJaxを導入するためのスクリプトをインターネット上から引っ張り出して、2番目のコードでHTMLのボディー内にあるMathJax用の書式を変換する感じ。やっぱり現代って神だわ。
+
+                            <h2>実際に書いてみよう</h2>
+
+                                たとえばマンデルブロ集合の定義を書くならHTML内に
+                                <div class="blockcode">
+<pre>
+\[
+    \begin{cases}Z_{n+1}=z_{n}^{2}+c\\ Z_{n}=0\end{cases}
+\]
+</pre>
+                                </div>
+                                と書けばあら不思議！
+                                \[\begin{cases}Z_{n+1}=z_{n}^{2}+c\\ Z_{n}=0\end{cases}\]
+                                はい、皆大好きマンデルブロ集合の定義が出せました。</br>
+                                </br>
+                                ちなみに、例えば\(1:\dfrac{1+\sqrt{5}}{2}\)とか文章内に黄金比を書く場合は
+                                <div class="blockcode">
+<pre>
+\(
+    1:\dfrac{1+\sqrt{5}}{2}
+\)
+</pre>
+                                </div>
+                                のように<span class="c"><code>\[</code></span><span class="c"><code>\]</code></span>を<span class="c"><code>\(</code></span><span class="c"><code>\)</code></span>へ変えるだけ。どう、簡単でしょ？</br>
+                                </br>
+                                と、こんな感じに数式であれば何でも書くことができる。勢いで書いてしまったが、肝心の中身(記号の説明とか書式の理解とか)を紹介すると終がないため、もしもMathJaxで色々と書きたい方は<a href="https://easy-copy-mathjax.nakaken88.com/" target="_blank" rel="noopener noreferrer">Easy Copy MathJax</a>というMathJaxのコマンド一覧を参考にしながら書いてほしい。…マジで便利。</br>
+                                </br>
+                                え？一々訳の分からない記号と睨めっこするのが嫌だって？仕方ないなぁ、のび太君は…。ほら、<a href="https://webdemo.myscript.com/views/math/index.html" target="_blank" rel="noopener noreferrer">MathJax Supporter : Web Equation Math</a>をあげるよ。これは数式を手書きするだけでMathJax形式に変換してくれたり、表示サンプルやグラフで可視化してくれる神ツールなんだ。…ガチで便利。</br>
+                                </br>
+                                そんな感じで、MathJaxの紹介記事でした。それでは、よい一日を～。
+                        <!-- EoF -->
+                    </div>
+                </div>
+                <div id="sidebar"></div>
+            </div>
+            <div id="footer"></div>
+        </main>
+        <script src="/page.js" type="text/javascript"></script>
+        <script src="/common-parts.js" type="text/javascript"></script>
+    </body>
+</html>
