@@ -44,7 +44,8 @@ img {
     vertical-align: top;
 }
 main {
-    margin: 32px 15%;
+    width: 960px;
+    margin: 32px auto;
 }
 
 #header {
@@ -312,6 +313,7 @@ main {
 
 @media screen and (max-width: 720px) {
     main {
+        width: auto;
         margin: 32px 0%;
     }
     #main > .content > .page {
@@ -334,7 +336,7 @@ main {
 }
 @media screen and (min-width: 720px) and (max-width: 960px) {
     main {
-        margin: 32px 5%;
+        width: 640px;
     }
     #main > .content > .page {
         padding-right: 0;
@@ -356,7 +358,7 @@ main {
 }
 @media screen and (min-width: 960px) and (max-width: 1280px) {
     main {
-        margin: 32px 10%;
+        width: 800px;
     }
     #main > .content > .page > .title {
         font-size: 16px;
