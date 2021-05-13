@@ -22,6 +22,14 @@ const onLoad = async () => {
     description.className = "description";
     description.innerHTML = content_data[n].description;
 
+    const categorys = document.createElement("div");
+    categorys.className = "category";
+    for (let a in content_data[n].category) {
+        const category = document.createElement("div");
+        category.innerHTML = content_data[n].category[a];
+        categorys.appendChild(category);
+    }
+
     const date = document.createElement("div");
     date.className = "date";
     date.innerHTML = content_data[n].date;
@@ -29,6 +37,7 @@ const onLoad = async () => {
     page.appendChild(ribbon);
     page.appendChild(title);
     page.appendChild(description);
+    page.appendChild(categorys);
     page.appendChild(date);
     content.prepend(page);
 

@@ -100,6 +100,29 @@ main {
     box-sizing: border-box;
     padding: 8px 96px 8px 80px;
 }
+#main > .content > .category {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+}
+#main > .content > .category > .tab {
+    text-align: center;
+    flex-grow: 2;
+    margin: 0 4px;
+    padding: 8px;
+    background-color: var(--white2);
+}
+#main > .content > .category > .tab:hover {
+    background-color: var(--white3);
+}
+#main > .content > .category > .dont {
+    color: var(--gray);
+    background-color: var(--white2);
+    background-image: repeating-linear-gradient(-45deg, var(--white1), var(--white1) 6px, transparent 0, transparent 12px);
+}
+#main > .content > .category > .active {
+    border-bottom: solid 4px var(--black4);
+}
 #main > .content > .page > .ribbon {
     display: inline-block;
     position: absolute;
@@ -137,6 +160,20 @@ main {
     margin-left: 2px;
     font-size: 14px;
     color: var(--black4);
+}
+#main > .content > .page > .category {
+    display: flex;
+    margin-top: 4px;
+}
+#main > .content > .page > .category > div{
+    margin: 0 2px;
+    padding: 2px 4px;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    border: solid 1px var(--gray);
+    color: var(--black4);
+    background-color: var(--white4);
 }
 #main > .content > .page > .date {
     display: inline-block;
@@ -329,9 +366,13 @@ main {
     #main > .content > .page > .description {
         font-size: 12px;
     }
+    #main > .content > .page > .category {
+        margin-left: -2px;
+        margin-bottom: 2px;
+    }
     #main > .content > .page > .date {
         position: static;
-        margin-top: 8px;
+        margin-top: 2px;
         font-size: 12px;
     }
     #main > .content > .page > .date:before {
@@ -351,9 +392,13 @@ main {
     #main > .content > .page > .description {
         font-size: 12px;
     }
+    #main > .content > .page > .category {
+        margin-left: -2px;
+        margin-bottom: 2px;
+    }
     #main > .content > .page > .date {
         position: static;
-        margin-top: 8px;
+        margin-top: 2px;
         font-size: 12px;
     }
     #main > .content > .page > .date:before {
