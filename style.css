@@ -94,12 +94,6 @@ main {
 #main > .content > .button:hover {
     background-color: var(--white3);
 }
-#main > .content > .page {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    padding: 8px 96px 8px 80px;
-}
 #main > .content > .category {
     display: flex;
     justify-content: center;
@@ -123,6 +117,15 @@ main {
 }
 #main > .content > .category > .active {
     border-bottom: solid 4px var(--black4);
+}
+#main > .content > .page {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px 96px 8px 80px;
+}
+#main > .content > .null {
+    display: none;
 }
 #main > .content > .page > .ribbon {
     display: inline-block;
