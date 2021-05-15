@@ -1,12 +1,22 @@
 const header = document.getElementById("header");
-header.insertAdjacentHTML("afterbegin", '<div class="sub-title">サブタイトルは思い付かないので募集中</div>');
-header.insertAdjacentHTML("afterbegin", '<a href="/" class="title">おぬ的な気まぐれブログ</a>');
+header.insertAdjacentHTML(
+    "afterbegin",
+    `
+        <a href="/" class="title">おぬ的な気まぐれブログ</a>
+        <div class="sub-title">サブタイトルは思い付かないので募集中</div>
+    `
+);
 
 const footer = document.getElementById("footer");
-footer.insertAdjacentHTML("beforeend", '<div class="copyright">(C) Something Onu</div>');
-footer.insertAdjacentHTML("beforeend", '<div class="precautions">お問い合わせ先 : <b>contact@0nu.be</b> もしくは <b>rogatelice@protonmail.com</b></div>');
-footer.insertAdjacentHTML("beforeend", '<div class="precautions">本サイトに掲載された情報・データによる損害については<b>一切の責任を負いません</b>。</div>');
-footer.insertAdjacentHTML("beforeend", '<div class="precautions">本サイトに掲載された情報・データの無断転載及び商用利用は<b>クレジットの記載を条件</b>に全て許可しているよ。</div>');
+footer.insertAdjacentHTML(
+    "afterbegin",
+    `
+        <div class="copyright">(C) Something Onu</div>
+        <div class="precautions">お問い合わせ先 : <b>contact@0nu.be</b> もしくは <b>rogatelice@protonmail.com</b></div>
+        <div class="precautions">本サイトに掲載された情報・データによる損害については<b>一切の責任を負いません</b>。</div>
+        <div class="precautions">本サイトに掲載された情報・データの無断転載及び商用利用は<b>クレジットの記載を条件</b>に全て許可しているよ。</div>
+    `
+);
 
 const sidebar = document.getElementById("sidebar");
 sidebar.insertAdjacentHTML(
