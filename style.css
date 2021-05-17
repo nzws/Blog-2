@@ -455,6 +455,14 @@ main {
 .text i {
     font-weight: 100;
 }
+.text s {
+    font-weight: 300;
+    color: var(--gray);
+}
+.text a {
+    font-weight: 500;
+    color: var(--accent);
+}
 .text .red {
     color: red;
 }
@@ -479,6 +487,9 @@ main {
 .text .purple {
     color: purple;
 }
+.text .gray {
+    color: gray;
+}
 .text .s32 {
     font-size: 32px;
 }
@@ -494,6 +505,9 @@ main {
 .text .s8 {
     font-size: 8px;
 }
+/* .text .mjx-chtml {
+    margin: 0 2px;
+} */
 .text q {
     margin: 0 2px;
     padding: 2px;
@@ -507,6 +521,12 @@ main {
     padding: 8px;
     font-size: 14px;
     color: var(--gray);
+    background-color: var(--white3);
+}
+.text > .example {
+    font-weight: 500;
+    border: solid 1px var(--white4);
+    color: var(--black4);
     background-color: var(--white3);
 }
 .text > .warning {
@@ -541,10 +561,6 @@ main {
 .text > .blockcode > pre {
     margin: 0;
     padding: 0;
-}
-.text a {
-    font-weight: 500;
-    color: var(--accent);
 }
 .text > .hide {
     color: transparent;
