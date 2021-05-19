@@ -551,12 +551,14 @@ main {
     background-color: var(--black2);
 }
 .text > .blockcode {
+    max-height: 360px;
     margin: 8px 0;
     padding: 8px;
     font-size: 14px;
     color: var(--white1);
     background-color: var(--black2);
     overflow-x: scroll;
+    overflow-y: scroll;
 }
 .text > .blockcode > pre {
     margin: 0;

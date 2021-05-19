@@ -79,6 +79,41 @@ if (HP === 0) {
 }
 </pre>
                             </div>
+                            <div class="blockcode">
+<pre>
+function setCategory(a) {
+    let requestURL = "/content.json";
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        if (category_flag[a] !== 2) {
+            const content_data = request.response;
+            for (let i in content_data) {
+                const n = content_data.length - i - 1;
+                const number = n.toString().padStart(4, "0");
+                const page = document.getElementById(`page-${number}`);
+                if (a == 0) {
+                    page.className = "page button";
+                } else {
+                    const isYes = content_data[i].category.includes(category_data[a]);
+                    page.className = `page button ${isYes ? "" : "null"}`;
+                }
+            }
+            for (let i in category_data) {
+                const tab = document.getElementById(`tab-${i}`);
+                if (a == i) {
+                    tab.className = "tab active";
+                } else {
+                    if (category_flag[i] !== 2) {tab.className = "tab";}
+                }
+            }
+        }
+    };
+};
+</pre>
+                            </div>
                             </br>
                             <blockquote class="warning">
                                 警告：</br>
