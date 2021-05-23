@@ -49,7 +49,7 @@ sidebar.insertAdjacentHTML(
             ・<a href="https://www.pixiv.net/users/63404396" target="_blank" rel="noopener noreferrer">Pixiv</a>
             <div class="category">外部リンク</div>
             ・<a href="https://0nu.be/" target="_blank" rel="noopener noreferrer">0nu.be (旧ホームページ)</a></br>
-            ・<a href="http://www.skaldworld.com/" target="_blank" rel="noopener noreferrer">Skald World</a></br>
+            ・<a href="https://zodiacnetwork.0nu.be/" target="_blank" rel="noopener noreferrer">Zodiac Network</a></br>
             ・<a href="https://dotplants.net/" target="_blank" rel="noopener noreferrer">dotPlants</a>
         </div>
         <div class="gallery">
